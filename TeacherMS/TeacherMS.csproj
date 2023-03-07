@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0F83BBB-D86C-4836-B5FA-AD22BD26E04A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TeacherMS</RootNamespace>
+    <AssemblyName>TeacherMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\ClassView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ClassView.Designer.cs">
+      <DependentUpon>ClassView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IndexView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\IndexView.Designer.cs">
+      <DependentUpon>IndexView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LabReportView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\LabReportView.Designer.cs">
+      <DependentUpon>LabReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaterialView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MaterialView.Designer.cs">
+      <DependentUpon>MaterialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaperTestView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PaperTestView.Designer.cs">
+      <DependentUpon>PaperTestView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\QueryStudentScoreView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\QueryStudentScoreView.Designer.cs">
+      <DependentUpon>QueryStudentScoreView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ScoreView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ScoreView.Designer.cs">
+      <DependentUpon>ScoreView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\StudentView.Designer.cs">
+      <DependentUpon>StudentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentWorkView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\StudentWorkView.Designer.cs">
+      <DependentUpon>StudentWorkView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudyCalenderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\StudyCalenderView.Designer.cs">
+      <DependentUpon>StudyCalenderView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SubjectDesignView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SubjectDesignView.Designer.cs">
+      <DependentUpon>SubjectDesignView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SubjectView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\SubjectView.Designer.cs">
+      <DependentUpon>SubjectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TeachPlanView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TeachPlanView.Designer.cs">
+      <DependentUpon>TeachPlanView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AboutMeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\AboutMeForm.Designer.cs">
+      <DependentUpon>AboutMeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditClassForm.Designer.cs">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditMaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditMaterialForm.Designer.cs">
+      <DependentUpon>EditMaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditPaperTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditPaperTestForm.Designer.cs">
+      <DependentUpon>EditPaperTestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditScoreForm.Designer.cs">
+      <DependentUpon>EditScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditStudentForm.Designer.cs">
+      <DependentUpon>EditStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditStudentWorkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditStudentWorkForm.Designer.cs">
+      <DependentUpon>EditStudentWorkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditStudyCalenderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditStudyCalenderForm.Designer.cs">
+      <DependentUpon>EditStudyCalenderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditSubjectDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditSubjectDesignForm.Designer.cs">
+      <DependentUpon>EditSubjectDesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditSubjectForm.Designer.cs">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditLabReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditLabReportForm.Designer.cs">
+      <DependentUpon>EditLabReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\EditTeachPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\EditTeachPlanForm.Designer.cs">
+      <DependentUpon>EditTeachPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RegistorTeacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\RegistorTeacherForm.Designer.cs">
+      <DependentUpon>RegistorTeacherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ClassView.resx">
+      <DependentUpon>ClassView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\IndexView.resx">
+      <DependentUpon>IndexView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LabReportView.resx">
+      <DependentUpon>LabReportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialView.resx">
+      <DependentUpon>MaterialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaperTestView.resx">
+      <DependentUpon>PaperTestView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QueryStudentScoreView.resx">
+      <DependentUpon>QueryStudentScoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ScoreView.resx">
+      <DependentUpon>ScoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudentView.resx">
+      <DependentUpon>StudentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudentWorkView.resx">
+      <DependentUpon>StudentWorkView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudyCalenderView.resx">
+      <DependentUpon>StudyCalenderView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SubjectDesignView.resx">
+      <DependentUpon>SubjectDesignView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SubjectView.resx">
+      <DependentUpon>SubjectView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TeachPlanView.resx">
+      <DependentUpon>TeachPlanView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\AboutMeForm.resx">
+      <DependentUpon>AboutMeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditClassForm.resx">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditLabReportForm.resx">
+      <DependentUpon>EditLabReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditMaterialForm.resx">
+      <DependentUpon>EditMaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditPaperTestForm.resx">
+      <DependentUpon>EditPaperTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditScoreForm.resx">
+      <DependentUpon>EditScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditStudentForm.resx">
+      <DependentUpon>EditStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditStudentWorkForm.resx">
+      <DependentUpon>EditStudentWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditStudyCalenderForm.resx">
+      <DependentUpon>EditStudyCalenderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditSubjectDesignForm.resx">
+      <DependentUpon>EditSubjectDesignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditSubjectForm.resx">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\EditTeachPlanForm.resx">
+      <DependentUpon>EditTeachPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\RegistorTeacherForm.resx">
+      <DependentUpon>RegistorTeacherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{EB915091-9182-470F-A255-4DE77797C5F2}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2AFE3B6B-E638-477C-96C2-DAF74C569C4B}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{F6D47BF4-66AF-48E0-9253-A8956596C5DD}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
